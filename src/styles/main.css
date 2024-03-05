@@ -1,0 +1,141 @@
+body {
+    background-image: url('../../images/TileableWall.png');
+    background-size: 30vh; 
+    height: 100vh; 
+    width: 100%; 
+}
+
+
+@media (max-width: 768px) {
+    body {
+        background-size: contain; 
+    }
+}
+
+ul > li {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#info {
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+}
+
+.contact-sep {
+    margin-top: 5rem;
+}
+
+textarea#bio {
+    position: absolute; 
+    width: calc(100% - 20px);  
+    
+    margin-right: -20px;
+}
+
+.drop-link {
+    bottom: 0;
+    margin-left: 2.5rem;
+    margin-bottom: 0.6rem;  
+}
+
+
+#contactLink {
+    display: inline-block;
+    max-width: 220px;
+    word-wrap: break-word;
+}
+
+#skills {
+    top: 0;
+    margin-top: 3rem;
+    margin-left: 24rem;
+}
+
+
+#skill-panel {
+    z-index: -1;
+    margin-left: -4rem;
+    margin-top: -1.5rem;
+    height: 45vh;
+    overflow: auto;
+}
+
+#skills button,
+#questLog button {
+    pointer-events: none;   
+}
+
+#tabs {
+    right: 0;
+    margin-top: 3rem;
+    margin-right: 2rem;
+}
+
+.tab {
+    z-index: -1;
+    margin-top: -0.7rem;
+}
+
+
+.border-etched {
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    color: white;    
+    margin-top: 0px;
+    /* border */
+    border-style: solid;
+    border-width: 7px 7px 7px 7px;
+    -moz-border-image: url("../../dist/img/select-border-image.png") 10% repeat repeat;
+    -webkit-border-image: url("../../dist/img/select-border-image.png") 10% repeat repeat;
+    -o-border-image: url("../../dist/img/select-border-image.png") 10% repeat repeat;
+    border-image: url("../../dist/img/select-border-image.png") 10% repeat repeat;    
+    overflow: auto;
+}
+
+.border-brown {
+    background: url("../../dist/img/select-background-image.png") repeat repeat;
+    background-clip: padding-box;
+    background-origin: padding-box;
+    background-position: center;
+    height: 30vh;
+    overflow: auto;
+}
+
+
+#questLog {
+    left: 0;
+    bottom: 0;
+    margin-left: 3rem;
+    margin-bottom: 25rem;
+}
+
+.log {
+    height: 36vh;
+    overflow: auto;
+}
+
+.log-info{
+    margin-left: 8rem;
+}
+
+
+#extra {
+    right: 0;
+    bottom: 0;
+    margin-bottom: 25rem;
+    margin-right: 17rem;
+}
+
+.hobbies:first-child {
+    margin-top: 2.5rem;
+}
+
+.cover {
+    transition: height 1s ease-in;
+}

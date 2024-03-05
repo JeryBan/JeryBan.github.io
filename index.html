@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="dist/rpgui.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+
+<body>
+    <div class="rpgui-content min-h-100">
+
+        <!-- Character Info -->
+        <div id="info" class="rpgui-container framed d-flex col-md-3" style="position: absolute;">
+            <div class="info w-50">
+                <h1>Character Info</h1>
+                <hr />
+
+                <label>Firstname:</label>
+                <input type="text" name="FirstName" value="Nikos" placeholder="Nikos" readonly>
+                <br /><br>
+
+                <label>Lastname:</label>
+                <input type="text" name="Lastname" value="Stathopoulos" placeholder="Stathopoulos" readonly>
+                <br /><br />
+
+                <label>Class:</label>
+                <input type="text" name="Profesion" value="Developer" placeholder="Developer" readonly>
+                <br /><br />
+
+                <label>Character bio:</label><br>
+                <textarea id="bio" rows="3" readonly></textarea>
+                <br>
+
+                <hr class="golden contact-sep" />
+
+                <label>Contact info:</label>
+                <select id="contact-dropdown" class="rpgui-dropdown" size="1" onchange="updateLink()">
+                    <option value="https://github.com/JeryBan" selected>github</option>
+                    <option value="https://www.linkedin.com/in/nikos-stathopoulos-3941b2298">linkedin</option>
+                    <option value="https://www.facebook.com/jerybananas">facebook</option>
+                    <option value="nikstathopulos@gmail.com">email</option>
+                </select>
+            </div>
+
+            <div class="">
+                <div><img class="p-5" src="images/avatar.png" alt=""></div>
+                <div class="drop-link" style="position: absolute;">
+                    <a id="contactLink" class="p-3" href="https://github.com/JeryBan" target="_blank">visit link</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div id="skills" style="position: absolute;" class="">
+
+            <button id="skill-label" class="rpgui-button" type="menu">
+                <h1>Skills</h1>
+            </button>
+
+            <div id="skill-panel" class="rpgui-container framed-golden col-lg-2">
+                <label>Python</label>
+                <div class="rpgui-progress red mb-3" data-value="0.5"></div>
+                <label>Java:</label>
+                <div class="rpgui-progress red mb-3" data-value="0.4"></div>
+                <label>html / css:</label>
+                <div class="rpgui-progress red mb-3" data-value="0.4"></div>
+                <label>Javascript</label>
+                <div class="rpgui-progress red mb-3" data-value="0.3"></div>
+                <label>Pytorch</label>
+                <div class="rpgui-progress green mb-3" data-value="0.5"></div>
+                <label>Spring Boot</label>
+                <div class="rpgui-progress green mb-3" data-value="0.2"></div>
+                <label>Linux</label>
+                <div class="rpgui-progress green mb-3" data-value="0.6"></div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <div id="tabs" class="" style="position: absolute;">
+            <div>
+                <button class="rpgui-button" type="menu" onclick="openTab('tab1')">
+                    <h1>Courses</h1>
+                </button>
+                <button class="rpgui-button" type="menu" onclick="openTab('tab2')">
+                    <h1>Education</h1>
+                </button>
+                <button class="rpgui-button" type="menu" onclick="openTab('tab3')">
+                    <h1>Projects</h1>
+                </button>
+            </div>
+
+            <div id="tab1" class="tab rpgui-container framed-golden col-md-4">
+                <!-- courses -->
+                <div class="border-etched border-brown">                    
+                    <ul>
+                        <li>CodingFactory</li>
+                        <li><i>@ Athens University of Economics and Business</i></li>
+                        <li>
+                            <hr>
+                        </li>
+                        <li>PyTorch for Deep Learning Bootcamp</li>
+                        <li><i>@Udemy</i></li>
+                        <li>
+                            <hr>
+                        </li>
+                        <li>Linux Administration: The Complete Linux
+                            Bootcamp</li>
+                        <li><i>@Udemy</i></li>
+                        <li>
+                            <hr>
+                        </li>
+                        <li>The Complete Python Developer
+                        </li>
+                        <li><i>@Udemy</i></li>
+                    </ul>                
+                </div>
+
+            </div>
+
+            <div id="tab2" class="tab rpgui-container framed-golden-2 hidden col-md-4">
+                <!-- education -->
+                <div class="border-etched">
+                    <h2>Department of Electrical and Computer
+                        Engineering</h2>
+                    <i>@University of Patras</i>
+                </div>
+                <hr>
+                <h4>Thesis:</h4>
+                <p>Development of a spatial sighting
+                    system with a camera attached to a pararotor.</p>
+
+            </div>
+
+            <div id="tab3" class="tab rpgui-container framed-golden hidden col-lg-4">
+                <!-- projects -->
+                <div class="border-etched border-brown">
+                    <ul class="rpg-list">
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li><h1>Comming Soon</h1> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Quest log -->
+        <div id="questLog" class="" style="position: absolute;">
+            <div>
+                <button id="quest-btn" class="rpgui-button" type="menu">
+                    <h1>Quest log</h1>
+                </button>
+            </div>
+
+            <div class="rpgui-container framed-golden-2 col-md-4">
+                <div class="border-etched log d-flex flex-column justify-content-between">
+                    <div><input class="rpgui-radio golden" type="radio" checked><label><i>2018-2023</i> Food Industry, (Barista / Bartender)</label></div>
+                    <div class="log-info py-3">
+                        <ul>
+                            <li></li>
+                            <li>Leading small Teams</li>
+                            <li>Training Personnel</li>
+                        </ul>
+                    </div>
+                    
+                    <div><input class="rpgui-radio golden" type="radio" checked><label><i>8/2014-4/2015</i> Think Silicon S.A, Patras Science Park, (Internship)</label></div>
+                    <div class="log-info py-3">
+                        <ul>
+                            <li>FPGA programming in Verilog (HDL)</li>
+                            <li>Image Processing Pipeline implementation</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Hobbies -->
+        <div id="extra" class="" style="position: absolute;">
+            <div>
+                <button class="rpgui-button" type="menu" onclick="toggleCover()">
+                    <h1>Hobbies and Interests</h1>
+                </button>
+            </div>
+
+            <div class="rpgui-container framed col-md-4">
+                <div class="border-etched log d-flex flex-column justify-content-between">
+                    <ul class="hobbies">
+                        <li>Aquascaping</li>
+                        <hr class="golden">
+                        <li>Motorcycle Riding</li>
+                        <hr class="golden">
+                        <li>Watching Anime</li>
+                        <hr class="golden">
+                        <li>Gaming</li>
+                        <hr class="golden">
+                        <li>Learning Japanese</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="rpgui-container framed col-md-4" >
+                <div class="cover border-etched log d-flex flex-column justify-content-between">
+                    <hr class="golden">
+                    <hr class="golden">
+                    <hr class="golden">
+                    <hr class="golden">
+                    <hr class="golden">
+                    <hr class="golden">
+                </div>
+
+            </div>
+
+
+
+
+
+
+        <script src="dist/rpgui.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"></script>
+        <script src="src/scripts/main.js"></script>
+</body>
+
+</html>

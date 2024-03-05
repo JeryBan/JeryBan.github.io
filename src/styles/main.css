@@ -75,12 +75,18 @@ textarea#bio {
 #tabs {
     right: 0;
     margin-top: 3rem;
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
 
 .tab {
     z-index: -1;
     margin-top: -0.7rem;
+}
+
+.hobbies {
+    margin-left: 1rem;
+    padding-top: 0.5rem;
+    font-size: 10px;
 }
 
 
@@ -125,15 +131,15 @@ textarea#bio {
 }
 
 
-#extra {
+#projects {
     right: 0;
     bottom: 0;
     margin-bottom: 25rem;
-    margin-right: 17rem;
+    margin-right: 28rem;
 }
 
-.hobbies:first-child {
-    margin-top: 2.5rem;
+.proj-list {
+    margin-top: 5rem;
 }
 
 .cover {

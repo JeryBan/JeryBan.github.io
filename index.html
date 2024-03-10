@@ -21,8 +21,8 @@
         <div class="wrapper-1">    
             <!-- Character Info -->    
             <div class="rpgui-container framed d-flex justify-content-between info-wrapper">
-                <div>
-                    <h1>Character Info</h1>
+                <div class="info">
+                    <h1 class="text-nowrap">Character Info</h1>
                     <hr />
 
                     <label>Firstname:</label>
@@ -37,19 +37,18 @@
                     <input type="text" name="Profesion" value="Developer" placeholder="Developer" readonly>
                     <br /><br />
 
-                    <label>Character bio:</label><br>
+                    <label class="text-nowrap">Character bio:</label><br>
                     <textarea id="bio" rows="3" readonly></textarea>
                     <br>
 
                     <hr class="golden contact-sep" />
 
-                    <label>Contact info:</label>
-                    <div class="dropdown d-flex flex-row justify-content-between">
-                        <select class="rpgui-dropdown" size="1" onchange="updateLink()">
+                    <label class="text-nowrap">Contact info:</label>
+                    <div class="dropdown d-flex flex-row justify-content-between align-items-center">
+                        <select class="rpgui-dropdown" size="3" onchange="updateLink()">
                             <option value="https://github.com/JeryBan" selected>github</option>
                             <option value="https://www.linkedin.com/in/nikos-stathopoulos-3941b2298">linkedin</option>
                             <option value="nikstathopulos@gmail.com">email</option>
-                            <option value="https://www.facebook.com/jerybananas">facebook</option>                        
                         </select>
                         <div class="drop-link">
                             <a id="contactLink" class="p-3" href="https://github.com/JeryBan" target="_blank">visit link</a>
@@ -59,9 +58,6 @@
 
                 <div class="d-flex flex-column justify-content-between justify-content-center">
                     <div class="avatar"><img class="p-5" src="images/avatar.png" alt=""></div>
-                    <!-- <div class="drop-link">
-                        <a id="contactLink" class="p-3" href="https://github.com/JeryBan" target="_blank">visit link</a>
-                    </div> -->
                 </div>
             </div>          
         

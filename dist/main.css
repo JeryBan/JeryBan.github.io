@@ -23,10 +23,9 @@ ul>li {
 /* -------------- info -------------------------- */
 .info-wrapper {
   position: relative;
-  overflow-x: hidden;
-  max-width: 600px;
-  min-width: 500px;
+  overflow-x: auto;
   min-height: 65vh;
+  max-width: 500px;
 }
 
 .avatar {
@@ -42,24 +41,23 @@ ul>li {
 
 textarea#bio {
   position: absolute;
-  width: 85%;
+  width: 90%;
   max-width: 475px;
 }
 
 .dropdown {
   position: absolute;
   height: 50px;
-  width: 85%;
+  width: 93%;
   max-width: 475px;
-  overflow: visible;
+  bottom: 5%;
 }
 
-
-/* .drop-link {
-  bottom: 0;
-  margin-left: 2.5rem;
-  margin-bottom: 0.6rem;
-} */
+.rpgui-dropdown-panel {
+  width: 100px;
+  max-height: 200px; 
+  overflow-y: auto; 
+}
 
 
 #contactLink {
@@ -71,7 +69,6 @@ textarea#bio {
 /* ------------------- skills ---------------------- */
 .skill-wrapper {
   max-width: 550px;
-  /* min-width: 400px; */
 }
 
 .skill-tab {
@@ -97,7 +94,6 @@ textarea#bio {
   position: relative;
   width: 90%;
   min-width: 500px;
-  max-width: 80%;
   height: 40vh;
 }
 
@@ -177,7 +173,7 @@ textarea#bio {
 }
 
 /* ---------------------desktop ------------------------ */
-@media (width > 1800px) {
+@media (width > 1550px) {
 
   .wrapper-1 {
     display: flex;
@@ -189,7 +185,6 @@ textarea#bio {
 
   .info-wrapper {
     max-width: 500px;
-    height: 65vh;
   }
 
   .skill-wrapper {
@@ -216,7 +211,7 @@ textarea#bio {
 
   .tabs-wrapper {
     height: 40vh;
-    max-width: 750px;
+    max-width: 700px;
   }
 
   #top button {
@@ -239,7 +234,7 @@ textarea#bio {
 
 
 /* ------------------- mid range ------------------------ */
-@media (width >= 1040px) and (width <= 1800px) {
+@media (width >= 1040px) and (width <= 1550px) {
 
   .wrapper-1 {
     display: flex;
@@ -292,8 +287,8 @@ textarea#bio {
 
 }
 
-/*----------------- mobile flat ---------------------- */
-@media (width > 850px) and (width < 1040px) {
+/*-----------------  ---------------------- */
+@media (width >= 800px) and (width < 1040px) {
 
   .wrapper-1 {
     display: flex;
@@ -303,6 +298,14 @@ textarea#bio {
 
   .info-wrapper {
     width: 40% !important;
+    min-width: 400px;
+  }
+
+  .info {
+    width: 45%;
+  }
+  .dropdown {
+    font-size: 12px;
   }
 
   .skill-wrapper {
@@ -392,8 +395,8 @@ textarea#bio {
 
 
 /* ------------------- mobile ------------------------- */
-@media (width <= 850px) {
-
+@media (width < 800px) and (orientation: portrait) {
+  
   .wrapper-1 {
     display: flex;
     flex-direction: column;
@@ -402,14 +405,26 @@ textarea#bio {
 
   .info-wrapper {
     width: 100%;
-    max-height: 70vh;
+    min-width: 400px;
+  }
+
+  .info {
+    width: 45%;
+  }
+
+  .dropdown {
+    font-size: 12px;
   }
 
   .skill-wrapper {
     width: 50%;
-    height: 30vh;
+    height: 35vh;
     min-width: 400px;
-    margin-top: -2.2rem;
+    margin-top: -3.2rem;
+  }
+
+  .skill-wrapper button {
+    margin-top: 1.5rem;
   }
 
   .mobile-wrapper {
@@ -419,6 +434,112 @@ textarea#bio {
     margin-left: auto;
     margin-right: auto;
     height: 40vh;
+    margin-top: 1rem;
+  }
+
+  .mobile-wrapper button {
+    pointer-events: none;
+    padding: 1rem;
+  }
+
+  .border-etched {
+    position: relative;
+  }
+
+  section:first-of-type h1 {
+    font-size: 12px;
+    margin-top: -0.3em;
+  }
+
+  .section {
+    position: relative;
+    z-index: 0;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    transform: scale3d(1, 1, 1);
+    will-change: transform, opacity, contents;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .section.is-expanded {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    cursor: auto;
+  }
+
+  .has-expanded-item .section:not(.is-expanded) {
+    transform: scale3d(0, 0, 0);
+    opacity: 0;
+  }
+
+  .close-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s linear;
+    will-change: opacity;
+  }
+
+  .section.is-expanded .close-section {
+    opacity: 1;
+    pointer-events: auto;
+    transition-duration: 0.2s;
+    transition-delay: 0.6s;
+  }
+
+  .box {
+    display: grid;
+    place-items: center;
+    padding-top: 3em;
+  }
+}
+
+/* -----------mobile landscape ----------------------- */
+@media (min-width: 800px) and (max-height: 500px) {
+
+  .wrapper-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .info-wrapper {
+    width: 40%;
+    min-width: 400px;
+    height: 150vh;
+  }
+
+  .info {
+    width: 45%;
+  }
+  .dropdown {
+    font-size: 12px;
+  }
+
+  .skill-wrapper {
+    width: 100%;
+    height: 100vh;
+    margin-top: 2rem;
+    margin-left: -1rem;
+  }
+
+  .mobile-wrapper {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
     margin-top: 1rem;
   }
 

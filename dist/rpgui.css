@@ -413,8 +413,8 @@ label {
 
 /* dropdown options list */
 ul.rpgui-dropdown-imp {
-  padding: 0rem 9rem 0 0 !important;
-  margin-top: 2rem;
+  padding: 0rem 9rem 0rem 0rem !important;
+  margin-top: 0rem;
   z-index: 100;
 }
 
@@ -423,7 +423,7 @@ ul.rpgui-dropdown-imp {
 .rpgui-content .rpgui-dropdown-imp-header {
   color: white !important;
   min-height: 22px !important;
-  padding: 5px 10px 0 10px !important;
+  padding: 5px 10px 0px 10px !important;
   margin: 0 0 0 0 !important;
   position: relative !important;
   }
@@ -433,7 +433,7 @@ ul.rpgui-dropdown-imp {
   /* font */
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   color: white;
-  height: 22px;
+  height: 23px;
   /* width: 80px; */
   /* remove the dot */
   list-style-type: none;

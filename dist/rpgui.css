@@ -208,8 +208,8 @@ inside your html file.
   height: 100%;
   left: 0px;
   top: 0px;
-  position: fixed;
-  overflow: hidden;
+  /* position: fixed; */
+  overflow: visible;
   font-size: 0.8em; }
 
 /* general rules to apply on anything inside the content */
@@ -243,9 +243,9 @@ inside your html file.
 /* game div without background image*/
 .rpgui-container {
   /* position style and default z */
-  position: fixed;
-  z-index: 10;
-  overflow: show; }
+  /* position: fixed; */
+  /* z-index: 10; */
+  overflow: auto; }
 
 /* game div with background image*/
 .rpgui-container.framed {
@@ -394,6 +394,7 @@ label {
   color: white;
   /* default size */
   min-height: 40px;
+  max-width: 200px;
   margin-top: 0px;
   /* border */
   border-style: solid;
@@ -407,6 +408,7 @@ label {
   background-clip: padding-box;
   background-origin: padding-box;
   background-position: center; }
+  
 
 /* dropdown options list */
 ul.rpgui-dropdown-imp {

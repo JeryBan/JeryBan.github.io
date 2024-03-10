@@ -1,0 +1,490 @@
+body {
+  background-image: url('../../images/TileableWall.png');
+  background-size: 30vh;
+}
+
+ul>li {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrapper-2 {
+  display: none !important;
+}
+
+.mobile-wrapper {
+  display: none;
+}
+
+
+/* -------------- info -------------------------- */
+.info-wrapper {
+  position: relative;
+  overflow-x: hidden;
+  max-width: 600px;
+  min-width: 500px;
+  min-height: 65vh;
+}
+
+.avatar {
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  height: 50%;
+  width: 90%;
+}
+
+.contact-sep {
+  margin-top: 5rem;
+}
+
+textarea#bio {
+  position: absolute;
+  width: 85%;
+  max-width: 475px;
+}
+
+.dropdown {
+  position: absolute;
+  height: 50px;
+  width: 85%;
+  max-width: 475px;
+  overflow: visible;
+}
+
+
+/* .drop-link {
+  bottom: 0;
+  margin-left: 2.5rem;
+  margin-bottom: 0.6rem;
+} */
+
+
+#contactLink {
+  display: inline-block;
+  max-width: 220px;
+  word-wrap: break-word;
+}
+
+/* ------------------- skills ---------------------- */
+.skill-wrapper {
+  max-width: 550px;
+  /* min-width: 400px; */
+}
+
+.skill-tab {
+  width: 100%;
+  margin-top: -2rem;
+}
+
+.skill-btn {
+  width: 100%;
+  font-size: 11px;
+  text-align: center;
+  z-index: 100;
+}
+
+.skill-wrapper button {
+  width: 3rem;
+  height: 3rem;
+  pointer-events: none;
+}
+
+/* ------------------- tabs -------------------------- */
+.tabs-wrapper {
+  position: relative;
+  width: 90%;
+  min-width: 500px;
+  max-width: 80%;
+  height: 40vh;
+}
+
+.tabs-wrapper .tab-btns {
+  position: absolute;
+  width: 100%;
+  min-width: 500px;
+  z-index: 1;
+}
+
+.tab {
+  position: absolute;
+  margin-top: 3rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* --------------------- borders -------------------------- */
+.border-etched {
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+  color: white;
+  margin-top: 0px;
+  height: 100%;
+  border-style: solid;
+  border-width: 7px 7px 7px 7px;
+  -moz-border-image: url("../../dist/img/select-border-image.png") 10% repeat repeat;
+  -webkit-border-image: url("../../dist/img/select-border-image.png") 10% repeat repeat;
+  -o-border-image: url("../../dist/img/select-border-image.png") 10% repeat repeat;
+  border-image: url("../../dist/img/select-border-image.png") 10% repeat repeat;
+  overflow: auto !important;
+}
+
+.border-brown {
+  background: url("../../dist/img/select-background-image.png") repeat repeat;
+  background-clip: padding-box;
+  background-origin: padding-box;
+  background-position: center;
+  overflow: auto;
+}
+
+
+/* --------------------- quest log ------------------------ */
+.quest-notes {
+  margin-left: 8rem;
+}
+
+/* ----------------------- projects ------------------------ */
+.project-wrapper {
+  position: relative;
+  width: 35%;
+  max-width:750px;
+  height: 35vh;
+  left: 15%;
+  margin-top: -2rem;
+}
+
+#projects button {
+  position: absolute;
+  margin-left: 3rem;
+  z-index: 1;
+}
+
+.project-wrapper .rpgui-container {
+  position: absolute;
+  width: 100%;
+  min-width: 600px;
+  height: 100%;
+  margin-top: 2rem;
+} 
+
+.cover {
+  transition: height 1s ease-in;
+}
+
+/* ---------------------desktop ------------------------ */
+@media (width > 1800px) {
+
+  .wrapper-1 {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    width: 50%;
+    margin-top: 6rem;
+  }
+
+  .info-wrapper {
+    max-width: 500px;
+    height: 65vh;
+  }
+
+  .skill-wrapper {
+    margin-top: 3rem;
+    margin-right: -1.5rem;
+    height: 50vh;
+    width: 35%;
+    max-width: 500px;
+  }
+
+  .skill-wrapper button {
+    margin-left: -2rem;
+  }
+
+  .wrapper-2 {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    width: 40%;
+    top: 0;
+    left: 50%;
+    margin-top: 1rem;
+  }
+
+  .tabs-wrapper {
+    height: 40vh;
+    max-width: 750px;
+  }
+
+  #top button {
+    width: 35%;
+  }
+
+  #bot button {
+    width: 40%;
+  }
+
+  #bot {
+    margin-top: 5rem;
+  }
+
+  #tab5 .border-etched {
+    height: 44%;
+  }
+  
+}
+
+
+/* ------------------- mid range ------------------------ */
+@media (width >= 1040px) and (width <= 1800px) {
+
+  .wrapper-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top: 1rem;
+  }
+
+  .skill-wrapper {
+    margin-top: -2rem;
+    width: 55%;
+    min-width: 400px;
+    height: 35vh;
+  }
+
+  .wrapper-2 {
+    display: flex !important;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    margin-top: 2rem;
+  }
+
+  .tabs-wrapper {
+    height: 40vh;
+  }
+
+  #bot {
+    margin-top: 6rem;
+  }
+
+  #tab5 .border-etched {
+    height: 44%;
+  }
+
+  .tabs-wrapper button {
+    margin-right: 0.5em;
+  }
+
+  .tab-btns {
+    font-size: 12px;
+  }
+
+  .tab3-btn {
+    padding-top: 0.5em;
+  }
+
+
+}
+
+/*----------------- mobile flat ---------------------- */
+@media (width > 850px) and (width < 1040px) {
+
+  .wrapper-1 {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+
+  .info-wrapper {
+    width: 40% !important;
+  }
+
+  .skill-wrapper {
+    width: 45%;
+    height: 55vh;
+    margin-top: 2rem;
+    margin-left: -1rem;
+  }
+
+  .mobile-wrapper {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40vh;
+    margin-top: 1rem;
+  }
+
+  .mobile-wrapper button {
+    pointer-events: none;
+    padding: 1rem;
+  }
+
+  .border-etched {
+    position: relative;
+  }
+
+  section:first-of-type h1 {
+    font-size: 12px;
+    margin-top: -0.3em;
+  }
+
+  .section {
+    position: relative;
+    z-index: 0;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    transform: scale3d(1, 1, 1);
+    will-change: transform, opacity, contents;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .section.is-expanded {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    cursor: auto;
+  }
+
+  .has-expanded-item .section:not(.is-expanded) {
+    transform: scale3d(0, 0, 0);
+    opacity: 0;
+  }
+
+  .close-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s linear;
+    will-change: opacity;
+  }
+
+  .section.is-expanded .close-section {
+    opacity: 1;
+    pointer-events: auto;
+    transition-duration: 0.2s;
+    transition-delay: 0.6s;
+  }
+
+  .box {
+    display: grid;
+    place-items: center;
+    padding-top: 3em;
+  }
+  
+}
+
+
+/* ------------------- mobile ------------------------- */
+@media (width <= 850px) {
+
+  .wrapper-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-wrapper {
+    width: 100%;
+    max-height: 70vh;
+  }
+
+  .skill-wrapper {
+    width: 50%;
+    height: 30vh;
+    min-width: 400px;
+    margin-top: -2.2rem;
+  }
+
+  .mobile-wrapper {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40vh;
+    margin-top: 1rem;
+  }
+
+  .mobile-wrapper button {
+    pointer-events: none;
+    padding: 1rem;
+  }
+
+  .border-etched {
+    position: relative;
+  }
+
+  section:first-of-type h1 {
+    font-size: 12px;
+    margin-top: -0.3em;
+  }
+
+  .section {
+    position: relative;
+    z-index: 0;
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    transform: scale3d(1, 1, 1);
+    will-change: transform, opacity, contents;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .section.is-expanded {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    cursor: auto;
+  }
+
+  .has-expanded-item .section:not(.is-expanded) {
+    transform: scale3d(0, 0, 0);
+    opacity: 0;
+  }
+
+  .close-section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s linear;
+    will-change: opacity;
+  }
+
+  .section.is-expanded .close-section {
+    opacity: 1;
+    pointer-events: auto;
+    transition-duration: 0.2s;
+    transition-delay: 0.6s;
+  }
+
+  .box {
+    display: grid;
+    place-items: center;
+    padding-top: 3em;
+  }
+}

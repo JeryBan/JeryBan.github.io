@@ -414,7 +414,7 @@ label {
 /* dropdown options list */
 ul.rpgui-dropdown-imp {
   padding: 0rem 9rem 0 0 !important;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   z-index: 100;
 }
 

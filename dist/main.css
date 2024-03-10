@@ -24,7 +24,7 @@ ul>li {
 .info-wrapper {
   position: relative;
   overflow-x: auto;
-  min-height: 65vh;
+  min-height: 600px;
   max-width: 500px;
 }
 
@@ -52,13 +52,6 @@ textarea#bio {
   max-width: 475px;
   bottom: 5%;
 }
-
-.rpgui-dropdown-panel {
-  width: 100px;
-  max-height: 200px; 
-  overflow-y: auto; 
-}
-
 
 #contactLink {
   display: inline-block;
@@ -395,7 +388,7 @@ textarea#bio {
 
 
 /* ------------------- mobile ------------------------- */
-@media (width < 800px) and (orientation: portrait) {
+@media (width < 800px) {
   
   .wrapper-1 {
     display: flex;
@@ -406,6 +399,7 @@ textarea#bio {
   .info-wrapper {
     width: 100%;
     min-width: 400px;
+    min-height: 600px;
   }
 
   .info {
@@ -420,6 +414,7 @@ textarea#bio {
     width: 50%;
     height: 35vh;
     min-width: 400px;
+    min-height: 300px;
     margin-top: -3.2rem;
   }
 
@@ -505,7 +500,7 @@ textarea#bio {
 }
 
 /* -----------mobile landscape ----------------------- */
-@media (min-width: 800px) and (max-height: 500px) {
+@media (min-width: 720px) and (max-height: 500px) {
 
   .wrapper-1 {
     display: flex;

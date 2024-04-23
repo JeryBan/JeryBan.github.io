@@ -51,6 +51,8 @@ function openTab(panelId, tabId) {
   hideTabs(panelId);
   showTab(panelId, tabId);
 }
+openTab('top', 'tab1'); // Default tab for 'top' panel is 'tab1'
+openTab('bot', 'tab4'); // Default tab for 'bot' panel is 'tab4
 
 // mobile tab funcionality
 const Boxlayout = (() => {
